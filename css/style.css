@@ -51,3 +51,42 @@ body {
   gap: 1rem;
   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
 }
+
+.card {
+  display: flex;
+  gap: 1rem;
+  flex-flow: column nowrap;
+  padding: 1rem;
+  box-shadow: var(--card-box-shadow);
+  border-radius: 15px;
+  margin: 0 auto;
+}
+
+.card-button-container {
+  display: flex;
+  flex-flow: column wrap;
+  gap: 1rem;
+}
+
+.title-container > h3 {
+  font-weight: 500;
+  font-size: 2rem;
+}
+
+.author-container > p {
+  font-size: 1rem;
+  font-style: italic;
+  font-weight: 400;
+}
+
+.card-button-delete {
+  cursor: pointer;
+  padding: 0.5rem;
+  min-height: 30px;
+  min-width: 120px;
+  border: none;
+  border-radius: 15px;
+  font-weight: 900;
+  background-color: var(--card-button-delete);
+  color: #ffffff;
+}
