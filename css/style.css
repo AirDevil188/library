@@ -37,3 +37,17 @@ body {
   min-height: 30px;
   min-width: 120px;
 }
+
+.container:nth-child(1) {
+  color: #ffffff;
+}
+.book-cards {
+  display: grid;
+  justify-items: center;
+  padding: 1rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: center;
+  gap: 1rem;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+}
