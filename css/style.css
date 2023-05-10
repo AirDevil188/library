@@ -128,3 +128,21 @@ input {
 label {
   text-align: start;
 }
+
+.button-checkbox-container {
+  display: flex;
+  flex-flow: row;
+}
+
+#submit-button {
+  border: none;
+  text-align: center;
+  padding: 1rem;
+  min-height: 30px;
+  min-width: 120px;
+  border-radius: 15px;
+  cursor: pointer;
+  color: white;
+  background-color: var(--main-button-color);
+  font-size: 1.1rem;
+}
