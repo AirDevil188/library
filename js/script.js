@@ -1,5 +1,12 @@
 let myLibrary = [];
 
+let submitButton = document.getElementById("submit-button");
+let cardButtonRead = document.querySelector(".card-button-read");
+let cardButtonDelete = document.querySelector(".card-button-delete");
+let readStatusButton = document.querySelector(".read-status-button");
+const addBookButton = document.querySelector(".add-book-button");
+const bookContainer = document.querySelector(".book-cards");
+
 function Book(title, author, pages, read) {
   this.title = title;
   this.author = author;
