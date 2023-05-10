@@ -124,10 +124,6 @@ label {
 input {
   padding: 0.5rem;
 }
-input:invalid + #submit-button {
-  opacity: 0.5;
-  pointer-events: none;
-}
 
 label {
   text-align: start;
