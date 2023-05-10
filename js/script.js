@@ -80,6 +80,10 @@ function toggleRead(index) {
   displayBook();
 }
 
+function clearBookContainer() {
+  bookContainer.textContent = "";
+}
+
 function changeButtonReadColor() {
   if (readStatusButton.textContent == "READ") {
     readStatusButton.style.backgroundColor = "#84cc16";
