@@ -111,7 +111,7 @@ body {
   box-shadow: var(--form-modal-box-shadow);
 }
 #form-modal::backdrop {
-  background-color: var(--form-modal-backdrop-color);
+  background-color: white;
 }
 
 input,
