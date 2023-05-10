@@ -70,3 +70,12 @@ function createCard(book) {
   cardButtonDelete.setAttribute("onclick", `deleteBook(${i})`);
   cardButtonDelete.textContent = "DELETE";
 }
+
+Book.prototype.toggleRead = function () {
+  this.read = !this.read;
+};
+
+function toggleRead(index) {
+  myLibrary[index].toggleRead();
+  displayBook();
+}
