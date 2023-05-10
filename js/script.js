@@ -71,6 +71,22 @@ function createCard(book) {
   cardButtonDelete.textContent = "DELETE";
 }
 
+function formValidation() {
+  const inputs = document.getElementsByTagName("input");
+  submitButton.disabled = true;
+  addEventListener("input", () => {
+    for (i = 0; i < inputs.length; i++) {
+      if (inputs[(0, 1, 2)].value == "") {
+        console.log("disabled state");
+        submitButton.disabled = true;
+      } else if (inputs[(0, 1, 2)].value !== "") {
+        submitButton.disabled = false;
+        console.log("enabled");
+      }
+    }
+  });
+}
+
 Book.prototype.toggleRead = function () {
   this.read = !this.read;
 };
@@ -106,4 +122,5 @@ addBookButton.addEventListener("click", () => {
   const formModal = document.getElementById("form-modal");
   formModal.showModal();
   document.querySelector(".form").reset();
+  formValidation();
 });
