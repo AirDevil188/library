@@ -79,3 +79,16 @@ function toggleRead(index) {
   myLibrary[index].toggleRead();
   displayBook();
 }
+
+function changeButtonReadColor() {
+  if (readStatusButton.textContent == "READ") {
+    readStatusButton.style.backgroundColor = "#84cc16";
+  } else if (readStatusButton.textContent == "NOT READ") {
+    readStatusButton.style.backgroundColor = "#dc2626";
+  }
+}
+
+function deleteBook(index) {
+  myLibrary.splice(index, 1);
+  displayBook();
+}
