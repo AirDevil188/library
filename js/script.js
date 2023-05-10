@@ -77,11 +77,9 @@ function formValidation() {
   addEventListener("input", () => {
     for (i = 0; i < inputs.length; i++) {
       if (inputs[(0, 1, 2)].value == "") {
-        console.log("disabled state");
         submitButton.disabled = true;
       } else if (inputs[(0, 1, 2)].value !== "") {
         submitButton.disabled = false;
-        console.log("enabled");
       }
     }
   });
