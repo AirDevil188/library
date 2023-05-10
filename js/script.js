@@ -92,3 +92,14 @@ function deleteBook(index) {
   myLibrary.splice(index, 1);
   displayBook();
 }
+
+submitButton.addEventListener("click", () => {
+  addBookToArray();
+  displayBook();
+});
+
+addBookButton.addEventListener("click", () => {
+  const formModal = document.getElementById("form-modal");
+  formModal.showModal();
+  document.querySelector(".form").reset();
+});
