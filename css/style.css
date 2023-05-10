@@ -146,3 +146,24 @@ label {
   background-color: var(--main-button-color);
   font-size: 1.1rem;
 }
+
+#submit-button:disabled {
+  background-color: #525252;
+}
+
+.status-read {
+  padding: 2rem;
+}
+
+.read-status-button {
+  min-height: 30px;
+  min-width: 120px;
+  font-weight: 900;
+  padding: 1.5rem;
+  font-size: 1rem;
+  color: white;
+  border-radius: 20px;
+  border: none;
+  cursor: pointer;
+  text-transform: capitalize;
+}
