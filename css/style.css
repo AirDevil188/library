@@ -52,23 +52,21 @@ body {
 }
 .book-cards {
   display: grid;
-  justify-items: center;
   padding: 1rem;
-  max-width: 1200px;
-  margin: 0 auto;
+  margin: 0;
   text-align: center;
-  gap: 1rem;
+  gap: 5rem;
   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
 }
 
 .card {
   display: flex;
+  flex-flow: column wrap;
+  margin: 0;
   gap: 1rem;
-  flex-flow: column nowrap;
   padding: 1rem;
   box-shadow: var(--card-box-shadow);
   border-radius: 15px;
-  margin: 0 auto;
 }
 
 .card-button-container {
@@ -77,27 +75,26 @@ body {
   gap: 1rem;
 }
 
-.title-container > h3 {
-  font-weight: 500;
+.title-container,
+.author-container,
+.pages-container {
+  padding: 0.5rem, 0;
+  margin: 0;
+}
+
+.title-container > p {
   font-size: 2rem;
+  font-weight: 600;
 }
-
 .author-container > p {
-  font-size: 1rem;
+  font-size: 1.5rem;
   font-style: italic;
-  font-weight: 400;
+  font-weight: 300;
 }
 
-.card-button-delete {
-  cursor: pointer;
-  padding: 0.5rem;
-  min-height: 30px;
-  min-width: 120px;
-  border: none;
-  border-radius: 15px;
-  font-weight: 900;
-  background-color: var(--card-button-delete);
-  color: #ffffff;
+.pages-container > p {
+  font-size: 1rem;
+  font-weight: 300;
 }
 
 #form-modal {
@@ -106,8 +103,8 @@ body {
   border: none;
   border-radius: 15px;
   padding: 1rem;
-  transition: opacity 0.5s;
   box-shadow: var(--form-modal-box-shadow);
+  overflow: hidden;
 }
 #form-modal::backdrop {
   background-color: white;
@@ -149,20 +146,31 @@ label {
 #submit-button:disabled {
   background-color: #525252;
 }
-
-.status-read {
-  padding: 2rem;
+.card-buttons-container {
+  display: flex;
+  gap: 1rem;
+  flex-flow: column wrap;
+  align-items: stretch;
 }
-
 .read-status-button {
-  min-height: 30px;
-  min-width: 120px;
   font-weight: 900;
-  padding: 1.5rem;
-  font-size: 1rem;
+  padding: 0.5rem;
+  font-size: 1.5rem;
   color: white;
   border-radius: 20px;
   border: none;
   cursor: pointer;
   text-transform: capitalize;
+}
+
+.card-button-delete {
+  flex-grow: 0;
+  cursor: pointer;
+  padding: 0.5rem;
+  border: none;
+  border-radius: 15px;
+  font-size: 1.5rem;
+  font-weight: 900;
+  background-color: var(--card-button-delete);
+  color: #ffffff;
 }

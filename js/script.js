@@ -39,8 +39,8 @@ function createCard(book) {
   const titleContainer = card.appendChild(document.createElement("div"));
   titleContainer.classList.add("title-container");
 
-  const h3Card = titleContainer.appendChild(document.createElement("h3"));
-  h3Card.textContent = `"${book.title}"`;
+  const bookTitle = titleContainer.appendChild(document.createElement("p"));
+  bookTitle.textContent = `“${book.title}”`;
 
   const authorContainer = card.appendChild(document.createElement("div"));
   authorContainer.classList.add("author-container");
@@ -54,21 +54,18 @@ function createCard(book) {
   const bookPagesPara = bookPagesContainer.appendChild(document.createElement("p"));
   bookPagesPara.textContent = `${book.pages} pages`;
 
-  const bookReadStatus = card.appendChild(document.createElement("div"));
-  bookReadStatus.classList.add("read-container");
+  const cardButtonsContainer = card.appendChild(document.createElement("div"));
+  cardButtonsContainer.classList.add("card-buttons-container");
 
-  readStatusButton = bookReadStatus.appendChild(document.createElement("button"));
+  readStatusButton = cardButtonsContainer.appendChild(document.createElement("button"));
   readStatusButton.classList.add("read-status-button");
   readStatusButton.setAttribute("onclick", `toggleRead(${i});`);
-  readStatusButton.textContent = `${book.read ? "READ" : "NOT READ"}`;
+  readStatusButton.textContent = `${book.read ? "Read" : "Not Read"}`;
 
-  const deleteContainer = card.appendChild(document.createElement("div"));
-  deleteContainer.classList.add("delete-container");
-
-  cardButtonDelete = deleteContainer.appendChild(document.createElement("button"));
+  cardButtonDelete = cardButtonsContainer.appendChild(document.createElement("button"));
   cardButtonDelete.classList.add("card-button-delete");
   cardButtonDelete.setAttribute("onclick", `deleteBook(${i})`);
-  cardButtonDelete.textContent = "DELETE";
+  cardButtonDelete.textContent = "Delete";
 }
 
 function formValidation() {
@@ -99,9 +96,9 @@ function clearBookContainer() {
 }
 
 function changeButtonReadColor() {
-  if (readStatusButton.textContent == "READ") {
-    readStatusButton.style.backgroundColor = "#84cc16";
-  } else if (readStatusButton.textContent == "NOT READ") {
+  if (readStatusButton.textContent == "Read") {
+    readStatusButton.style.backgroundColor = "#22c55e";
+  } else if (readStatusButton.textContent == "Not Read") {
     readStatusButton.style.backgroundColor = "#dc2626";
   }
 }
