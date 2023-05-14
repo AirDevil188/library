@@ -111,7 +111,7 @@ label {
   align-items: stretch;
 }
 .read-status-button {
-  font-weight: 900;
+  font-weight: 600;
   padding: 0.5rem;
   font-size: 1.5rem;
   color: #000000;
@@ -211,4 +211,18 @@ label {
 #submit-button:hover {
   background-color: #182741;
   font-weight: 900;
+}
+
+footer {
+  width: 100%;
+  font-size: 1.5rem;
+  display: flex;
+  position: absolute;
+  justify-content: center;
+  bottom: 0;
+}
+
+.footer-user {
+  text-decoration: none;
+  color: #000000;
 }
