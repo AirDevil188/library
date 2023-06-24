@@ -7,11 +7,20 @@ let readStatusButton = document.querySelector(".read-status-button");
 const addBookButton = document.querySelector(".add-book-button");
 const bookContainer = document.getElementById("book-cards-container");
 
-function Book(title, author, pages, read) {
-  this.title = title;
-  this.author = author;
-  this.pages = pages;
-  this.read = read;
+// function Book(title, author, pages, read) {
+//   this.title = title;
+//   this.author = author;
+//   this.pages = pages;
+//   this.read = read;
+// }
+
+class Book {
+  constructor(title, author, pages, read) {
+    this.title = title;
+    this.author = author;
+    this.pages = pages;
+    this.read = read;
+  }
 }
 
 function addBookToArray() {
@@ -119,5 +128,3 @@ addBookButton.addEventListener("click", () => {
   document.querySelector(".form").reset();
   formValidation();
 });
-
-
